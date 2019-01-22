@@ -1,0 +1,54 @@
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+    <children>
+        <HBox alignment="TOP_CENTER" prefHeight="150.0" prefWidth="250.0">
+            <children>
+                <Label text="Number of program states: " />
+                <Label fx:id="prgStatesCnt" text="0" />
+            </children>
+        </HBox>
+        <Label text="Heap Table:" />
+        <TableView fx:id="heapTableView" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Adress" />
+                <TableColumn editable="false" prefWidth="75.0" text="Value" />
+            </columns>
+        </TableView>
+        <Label text="Program output:" />
+        <ListView fx:id="outListView" prefHeight="200.0" prefWidth="200.0" />
+        <Label text="File Table:" />
+        <TableView fx:id="fileTableView" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="125.0" text="Variable name" />
+                <TableColumn editable="false" prefWidth="129.0" text="File Name" />
+            </columns>
+        </TableView>
+        <Label text="Program States:" />
+        <ListView fx:id="prgStateListView" prefHeight="200.0" prefWidth="200.0" />
+        <Label fx:id="prgIdLabel" text="1">
+            <graphic>
+                <Label text="Currently Selected Program ID: " />
+            </graphic>
+        </Label>
+        <Label text="Symbol table: " />
+        <TableView fx:id="symTableView" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Symbol" />
+                <TableColumn prefWidth="75.0" text="Value" />
+            </columns>
+        </TableView>
+        <Label text="Execution Stack:" />
+        <ListView fx:id="exeStackListView" prefHeight="200.0" prefWidth="200.0" />
+
+        <Button fx:id = 'onestepBTN' mnemonicParsing="false" onAction="#oneStepForGui" prefHeight="26.0" prefWidth="606.0" text="Run one step" />
+    </children>
+</VBox>
